@@ -1,0 +1,6 @@
+[
+	{"keys": ["f8"], "command": "xdebug_breakpoint"}, //breakpoint
+	{"keys": ["f9"], "command": "xdebug_continue", "args": {"command": "run"}}, //run
+	{"keys": ["command+f6"], "command": "xdebug_session_start"}, //start debugging
+	{"keys": ["command+f7"], "command": "xdebug_session_stop"} //stop debugging
+]

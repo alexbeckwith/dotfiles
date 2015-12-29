@@ -1,0 +1,12 @@
+[
+    {
+        "class": "sidebar_label",
+        "font.face": "Roboto Light",
+        "font.size": 11,
+        "color": [185,185,185]
+    },
+    {
+    	"class": "minimap_control",
+    	"viewport_color": [255,255,255,35],
+    }
+]

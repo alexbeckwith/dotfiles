@@ -1,0 +1,21 @@
+{
+	"path_mapping": {
+		"/var/www/app" : "/Users/abeckwith/Development/churchcommunitybuilder/app",
+	},
+	"url": "http://dev.local/",
+	"max_children": 256,
+    "max_data": 6000,
+    "max_depth": 3,
+    "break_on_exception": [
+        "Fatal error"
+        , "Catchable fatal error"
+        , "Warning"
+    ],
+    "close_on_stop": true,
+    "pretty_output": true,
+    "debug_layout" : {
+    	"cols": [0.0, 1.0],
+    	"cells": [[0, 0, 1, 1], [0, 1, 1, 2]],
+    	"rows": [0.0, 0.7, 1.0]
+    }
+}

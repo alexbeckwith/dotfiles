@@ -1,0 +1,35 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"ApacheConf.tmLanguage",
+		"BracketHighlighter",
+		"ColorPicker",
+		"DocBlockr",
+		"Emmet",
+		"Function Name Display",
+		"Git",
+		"GitGutter",
+		"GoToClass",
+		"GotoDocumentation",
+		"HTML-CSS-JS Prettify",
+		"Monokai - Spacegray",
+		"Package Control",
+		"PHP Companion",
+		"SCSS",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-contrib-scss-lint",
+		"SublimeLinter-csslint",
+		"SublimeLinter-jshint",
+		"SublimeLinter-json",
+		"SublimeLinter-php",
+		"SublimeLinter-phpcs",
+		"Theme - Soda",
+		"Theme - Spacegray",
+		"Xdebug Client"
+	]
+}
