@@ -6,6 +6,9 @@
 
 killall "Sublime Text"
 
+echo "Setting key repeat rate"
+defaults write NSGlobalDomain KeyRepeat -int 0
+
 dir=~/dotfiles
 zshconf=~/.zshrc
 sublconf=User
