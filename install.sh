@@ -4,16 +4,30 @@
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 ############################
 
-########## Variables
+killall "Sublime Text"
 
-dir=~/dotfiles                    # dotfiles directory
+dir=~/dotfiles
+zshconf=~/.zshrc
+sublconf=User
 
 echo "Moving zsh settings"
-mv ~/.zshrc ~/.zshrc_OLD
+if [ -L $zshconf ]; then
+    rm $zshconf
+else
+    mv ~/.zshrc ~/.zshrc_bak_`date +"%Y_%m_%d_%H_%M_%S"`
+fi
 echo "Creating symlink for zsh settings"
-ln -s $dir/zshrc ~/.zshrc
+ln -sf $dir/zshrc $zshconf
 
 echo "Moving Sublime user settings"
-mv ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/ ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User_OLD/
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+if [ -L $sublconf ]; then
+    rm $sublconf
+else
+    mv $sublconf "$sublconf"_bak_`date +"%Y_%m_%d_%H_%M_%S"`
+fi
 echo "Creating symlink for Sublime user settings"
-ln -s $dir/sublime/User/ ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+ln -sf $dir/sublime/$sublconf
+
+cd $dir/oh-my-zsh/themes
+ln -sf $dir/bullet-train-oh-my-zsh-theme/bullet-train.zsh-theme
