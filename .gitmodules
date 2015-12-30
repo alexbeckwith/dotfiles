@@ -1,6 +1,8 @@
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
+    ignore = dirty
 [submodule "bullet-train-oh-my-zsh-theme"]
 	path = bullet-train-oh-my-zsh-theme
 	url = https://github.com/caiogondim/bullet-train-oh-my-zsh-theme
+    ignore = dirty
