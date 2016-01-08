@@ -38,6 +38,16 @@ source $ZSH/oh-my-zsh.sh
 
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+export bb="team/5guys"
+
+coNewBranch() {
+    if [ -z "$2" ]; then
+        git checkout -b $1 $bb
+    else
+        git checkout -b $1 $2
+    fi
+}
+
 alias zshconfig="subl ~/dotfiles/zshrc"
 alias ohmyzsh="subl ~/dotfiles/oh-my-zsh"
 alias vup="vagrant up"
@@ -47,4 +57,7 @@ alias netrem="networksetup -switchtolocation \"Remote\""
 alias netdef="networksetup -switchtolocation \"Office\""
 alias gsp="git smart-pull"
 alias pf="sudo pfctl -ef /etc/pf.conf"
-alias ghome="git checkout team/5guys && git smart-pull"
+alias gh="git checkout $bb"
+alias ghsp="git checkout $bb && git smart-pull"
+alias gcob=coNewBranch
+alias dotfiles="cd ~/dotfiles; gst";
