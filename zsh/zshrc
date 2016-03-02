@@ -2,7 +2,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/dotfiles/zsh/oh-my-zsh
 
-# ZSH_THEME=bullet-train
+ZSH_THEME=bullet-train
 
 # CASE_SENSITIVE="true"
 
@@ -51,12 +51,12 @@ coNewBranch() {
 
 # general commands
 
-alias zshconf="subl ~/dotfiles/zsh/zshrc"
-alias zshref="source ~/.zshrc";
+alias zc="subl ~/dotfiles/zsh/zshrc"
+alias zl="source ~/.zshrc";
 alias ohmyzsh="subl ~/dotfiles/zsh/oh-my-zsh"
-alias dotfiles="cd ~/dotfiles && gst";
+alias df="cd ~/dotfiles && gst";
 alias ccb="cd ~/Development/churchcommunitybuilder/app && gst";
-alias lsa="ls -a";
+alias lss="ls -aF";
 
 # vagrant
 alias vup="vagrant up"
