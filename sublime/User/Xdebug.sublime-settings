@@ -9,13 +9,13 @@
     "break_on_exception": [
         "Fatal error"
         , "Catchable fatal error"
-        , "Warning"
+        // , "Warning"
     ],
     "close_on_stop": true,
     "pretty_output": true,
     "debug_layout" : {
-    	"cols": [0.0, 1.0],
     	"cells": [[0, 0, 1, 1], [0, 1, 1, 2]],
-    	"rows": [0.0, 0.7, 1.0]
+    	"rows": [0.0, 0.6516199014046462, 1.0],
+    	"cols": [0.0, 1.0]
     }
 }

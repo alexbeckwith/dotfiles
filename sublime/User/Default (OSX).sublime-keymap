@@ -1,6 +1,12 @@
 [
 	{"keys": ["f8"], "command": "xdebug_breakpoint"}, //breakpoint
 	{"keys": ["f9"], "command": "xdebug_continue", "args": {"command": "run"}}, //run
-	{"keys": ["command+f6"], "command": "xdebug_session_start"}, //start debugging
-	{"keys": ["command+f7"], "command": "xdebug_session_stop"} //stop debugging
+	{"keys": ["super+f6"], "command": "xdebug_session_start"}, //start debugging
+	{"keys": ["super+f7"], "command": "xdebug_session_stop"}, //stop debugging
+	{"keys": ["ctrl+r"], "command": "goto_definition"},
+	{"keys": ["ctrl+c"], "command": "clone_file"},
+	{"keys": ["ctrl+super+s"], "command": "xdebug_watch"},
+	{"keys": ["ctrl+super+d"], "command": "xdebug_watch", "args": {"edit": true}},
+	{"keys": ["ctrl+super+r"], "command": "xdebug_watch", "args": {"remove": true}},
+	{"keys": ["ctrl+super+c"], "command": "xdebug_watch", "args": {"clear": true}}
 ]

@@ -1,7 +1,8 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/dotfiles/oh-my-zsh
 
-ZSH_THEME=bullet-train
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/dotfiles/zsh/oh-my-zsh
+
+# ZSH_THEME=bullet-train
 
 # CASE_SENSITIVE="true"
 
@@ -26,11 +27,11 @@ ENABLE_CORRECTION="true"
 
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-plugins=(git sublime)
+plugins=(git sublime zsh-syntax-highlighting zsh-autosuggestions)
 
 # User configuration
 
-export PATH="$PATH:/usr/local/bin:$HOME/.rvm/gems/ruby-2.2.1/bin:$HOME/.rvm/gems/ruby-2.2.1@global/bin:$HOME/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/pear/bin:$HOME/.rvm/bin:$HOME/bin' >> ~/dotfiles/zshrc"
+export PATH="$PATH:/usr/local/bin:/usr/local/share/npm/bin:$HOME/.rvm/gems/ruby-2.2.1/bin:$HOME/.rvm/gems/ruby-2.2.1@global/bin:$HOME/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/pear/bin:$HOME/.rvm/bin:$HOME/bin' >> ~/dotfiles/zsh/zshrc"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -48,16 +49,28 @@ coNewBranch() {
     fi
 }
 
-alias zshconfig="subl ~/dotfiles/zshrc"
-alias ohmyzsh="subl ~/dotfiles/oh-my-zsh"
+# general commands
+
+alias zshconf="subl ~/dotfiles/zsh/zshrc"
+alias zshref="source ~/.zshrc";
+alias ohmyzsh="subl ~/dotfiles/zsh/oh-my-zsh"
+alias dotfiles="cd ~/dotfiles && gst";
+alias ccb="cd ~/Development/churchcommunitybuilder/app && gst";
+alias lsa="ls -a";
+
+# vagrant
 alias vup="vagrant up"
 alias vdown="vagrant halt"
 alias vref="vagrant reload"
+alias pf="sudo pfctl -ef /etc/pf.conf"
+
+# network settings
 alias netrem="networksetup -switchtolocation \"Remote\""
 alias netdef="networksetup -switchtolocation \"Office\""
+
+# git
 alias gsp="git smart-pull"
-alias pf="sudo pfctl -ef /etc/pf.conf"
 alias gh="git checkout $bb"
 alias ghsp="git checkout $bb && git smart-pull"
 alias gcob=coNewBranch
-alias dotfiles="cd ~/dotfiles; gst";
+alias grh="g reset --hard $bb";

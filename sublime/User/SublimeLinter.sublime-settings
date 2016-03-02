@@ -11,18 +11,15 @@
 		"lint_mode": "background",
 		"linters":
 		{
-			"csslint":
+			"jscs":
 			{
 				"@disable": false,
 				"args":
 				[
 				],
-				"errors": "",
 				"excludes":
 				[
-				],
-				"ignore": "",
-				"warnings": ""
+				]
 			},
 			"jshint":
 			{
@@ -76,6 +73,16 @@
 				[
 				]
 			},
+			"sass":
+			{
+				"@disable": true,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
+			},
 			"scss":
 			{
 				"@disable": false,
@@ -87,6 +94,16 @@
 				[
 				],
 				"include-linter": ""
+			},
+			"sqlint":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
 			}
 		},
 		"mark_style": "solid underline",

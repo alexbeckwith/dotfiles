@@ -1,4 +1,9 @@
 {
+	"added_words":
+	[
+		"phtml",
+		"admin"
+	],
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/User/SublimeLinter/base16-ocean.dark (SL).tmTheme",
 	"default_line_ending": "unix",
@@ -22,7 +27,7 @@
 	"show_full_path": true,
 	"tab_size": 4,
 	"theme": "Spacegray.sublime-theme",
-	"translate_tabs_to_spaces": true,
+	"translate_tabs_to_spaces": false,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,
 	"word_wrap": "true"

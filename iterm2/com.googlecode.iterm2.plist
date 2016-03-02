@@ -332,13 +332,13 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>-738 438 445 600 -1080 -467 1080 1897 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>130 292 924 485 0 0 1280 777 </string>
+	<string>1337 879 924 485 1280 -533 1080 1897 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>-732 875 384 129 -1080 -467 1080 1897 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>640 74 640 698 0 0 1280 777 </string>
+	<string>1282 -459 1075 1818 1280 -533 1080 1897 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 346 570 426 0 0 1280 777 </string>
+	<string>1280 1060 585 426 1280 -390 1080 1897 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1067,10 +1067,12 @@
 			<string>~/Development/churchcommunitybuilder/app</string>
 		</dict>
 	</array>
+	<key>NoSyncNeverRemindPrefsChangesLost</key>
+	<true/>
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>466033412.20167297</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>473107630.86245799</real>
+	<real>475517603.34102899</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -1135,7 +1137,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-12-29T17:24:58Z</date>
+	<date>2016-01-26T16:11:45Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1145,7 +1147,7 @@
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.40000000596046448</real>
+	<real>0.16303835809230804</real>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
