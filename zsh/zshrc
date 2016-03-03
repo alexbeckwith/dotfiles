@@ -49,6 +49,14 @@ coNewBranch() {
     fi
 }
 
+smartPullAndRebase() {
+	currentBranch="$(git rev-parse --abbrev-ref HEAD)";
+	git checkout $bb
+	git smart-pull
+	git checkout "${currentBranch}"
+	git rebase $bb
+}
+
 # general commands
 
 alias zc="subl ~/dotfiles/zsh/zshrc"
@@ -58,15 +66,16 @@ alias df="cd ~/dotfiles && gst";
 alias ccb="cd ~/Development/churchcommunitybuilder/app && gst";
 alias lss="ls -aF";
 
-# vagrant
-alias vup="vagrant up"
-alias vdown="vagrant halt"
-alias vref="vagrant reload"
-alias pf="sudo pfctl -ef /etc/pf.conf"
-
 # network settings
 alias netrem="networksetup -switchtolocation \"Remote\""
 alias netdef="networksetup -switchtolocation \"Office\""
+alias pf="sudo pfctl -ef /etc/pf.conf"
+
+# vagrant
+alias vup="vagrant up && pf"
+alias vdown="vagrant halt"
+alias vref="vagrant reload"
+
 
 # git
 alias gsp="git smart-pull"
@@ -74,3 +83,4 @@ alias gh="git checkout $bb"
 alias ghsp="git checkout $bb && git smart-pull"
 alias gcob=coNewBranch
 alias grh="g reset --hard $bb";
+alias ghrb=smartPullAndRebase;
