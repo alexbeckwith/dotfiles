@@ -10,6 +10,12 @@
 	"detect_indentation": false,
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
+	"folder_exclude_patterns":
+	[
+		"build",
+		"node_modules",
+		"js/lib"
+	],
 	"font_face": "Source Code Pro Light",
 	"font_size": 13,
 	"highlight_line": true,

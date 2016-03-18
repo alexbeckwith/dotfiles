@@ -39,7 +39,7 @@ source $ZSH/oh-my-zsh.sh
 
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-export bb="team/5guys"
+export bb="team/rss"
 
 coNewBranch() {
     if [ -z "$2" ]; then
@@ -84,3 +84,5 @@ alias ghsp="git checkout $bb && git smart-pull"
 alias gcob=coNewBranch
 alias grh="g reset --hard $bb";
 alias ghrb=smartPullAndRebase;
+alias gdhead="git diff HEAD";
+alias gdhome="git diff $bb";
