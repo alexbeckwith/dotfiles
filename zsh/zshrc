@@ -31,7 +31,7 @@ plugins=(git sublime zsh-syntax-highlighting zsh-autosuggestions)
 
 # User configuration
 
-export PATH="$PATH:/usr/local/bin:/usr/local/share/npm/bin:$HOME/.rvm/gems/ruby-2.2.1/bin:$HOME/.rvm/gems/ruby-2.2.1@global/bin:$HOME/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/pear/bin:$HOME/.rvm/bin:$HOME/bin' >> ~/dotfiles/zsh/zshrc"
+export PATH="$PATH:/usr/local/bin:/usr/local/share/npm/bin:$HOME/.rvm/gems/ruby-2.2.1/bin:$HOME/.rvm/gems/ruby-2.2.1@global/bin:$HOME/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/pear/bin:$HOME/.rvm/bin:$HOME/bin:$HOME/Development/churchcommunitybuilder/app/vendor/bin/:' >> ~/dotfiles/zsh/zshrc"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -39,7 +39,8 @@ source $ZSH/oh-my-zsh.sh
 
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-export bb="team/rss"
+export bb="features/complete_create_schedule"
+export vdef="dev01"
 
 coNewBranch() {
     if [ -z "$2" ]; then
@@ -72,17 +73,19 @@ alias netdef="networksetup -switchtolocation \"Office\""
 alias pf="sudo pfctl -ef /etc/pf.conf"
 
 # vagrant
-alias vup="vagrant up && pf"
-alias vdown="vagrant halt"
-alias vref="vagrant reload"
-
+alias vup="vagrant up $vdef && pf"
+alias vdown="vagrant halt $vdef"
+alias vref="vagrant reload $vdef"
+alias vrebuild="$HOME/Dropbox\ \(CCBHQ\)/Vagrant/rebuild.sh"
 
 # git
 alias gsp="git smart-pull"
 alias gh="git checkout $bb"
 alias ghsp="git checkout $bb && git smart-pull"
-alias gcob=coNewBranch
-alias grh="g reset --hard $bb";
 alias ghrb=smartPullAndRebase;
+alias gcob=coNewBranch
+alias grh="git reset --hard $bb";
+alias gd1="git diff HEAD\^";
+alias gd2="git diff HEAD\^\^";
 alias gdhead="git diff HEAD";
 alias gdhome="git diff $bb";
