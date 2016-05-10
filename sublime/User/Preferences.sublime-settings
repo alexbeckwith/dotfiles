@@ -13,8 +13,7 @@
 	"folder_exclude_patterns":
 	[
 		"build",
-		"node_modules",
-		"js/lib"
+		"node_modules"
 	],
 	"font_face": "Source Code Pro Light",
 	"font_size": 13,

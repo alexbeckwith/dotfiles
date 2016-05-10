@@ -1,46 +1,20 @@
-
-# Path to your oh-my-zsh installation.
 export ZSH=$HOME/dotfiles/zsh/oh-my-zsh
 
 ZSH_THEME=bullet-train
-
-# CASE_SENSITIVE="true"
-
 HYPHEN_INSENSITIVE="true"
-
-# DISABLE_AUTO_UPDATE="true"
-
-# export UPDATE_ZSH_DAYS=13
-
-# DISABLE_LS_COLORS="true"
-
-# DISABLE_AUTO_TITLE="true"
-
 ENABLE_CORRECTION="true"
 
-# COMPLETION_WAITING_DOTS="true"
-
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
 plugins=(git sublime zsh-syntax-highlighting zsh-autosuggestions)
-
-# User configuration
 
 export PATH="$PATH:/usr/local/bin:/usr/local/share/npm/bin:$HOME/.rvm/gems/ruby-2.2.1/bin:$HOME/.rvm/gems/ruby-2.2.1@global/bin:$HOME/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/pear/bin:$HOME/.rvm/bin:$HOME/bin:$HOME/Development/churchcommunitybuilder/app/vendor/bin/:' >> ~/dotfiles/zsh/zshrc"
 
 source $ZSH/oh-my-zsh.sh
 
-# export LANG=en_US.UTF-8
+# Custom!
 
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-export bb="features/complete_create_schedule"
+export bb="features/you_been_served"
 export vdef="dev01"
+export XDEBUG_CONFIG="idekey=sublime.xdebug"
 
 coNewBranch() {
     if [ -z "$2" ]; then
@@ -51,21 +25,22 @@ coNewBranch() {
 }
 
 smartPullAndRebase() {
-	currentBranch="$(git rev-parse --abbrev-ref HEAD)";
-	git checkout $bb
+	baseBranch=$((-z "$1" ? $bb : $1))
+	currentBranch="$(git rev-parse --abbrev-ref HEAD)"
+	git checkout baseBranch
 	git smart-pull
 	git checkout "${currentBranch}"
-	git rebase $bb
+	git rebase baseBranch
 }
 
 # general commands
 
 alias zc="subl ~/dotfiles/zsh/zshrc"
-alias zl="source ~/.zshrc";
+alias zl="source ~/.zshrc"
 alias ohmyzsh="subl ~/dotfiles/zsh/oh-my-zsh"
-alias df="cd ~/dotfiles && gst";
-alias ccb="cd ~/Development/churchcommunitybuilder/app && gst";
-alias lss="ls -aF";
+alias df="cd ~/dotfiles && gst"
+alias ccb="cd ~/Development/churchcommunitybuilder/app && gst"
+alias lss="ls -aF"
 
 # network settings
 alias netrem="networksetup -switchtolocation \"Remote\""
@@ -82,10 +57,10 @@ alias vrebuild="$HOME/Dropbox\ \(CCBHQ\)/Vagrant/rebuild.sh"
 alias gsp="git smart-pull"
 alias gh="git checkout $bb"
 alias ghsp="git checkout $bb && git smart-pull"
-alias ghrb=smartPullAndRebase;
+alias ghrb=smartPullAndRebase
 alias gcob=coNewBranch
-alias grh="git reset --hard $bb";
-alias gd1="git diff HEAD\^";
-alias gd2="git diff HEAD\^\^";
-alias gdhead="git diff HEAD";
-alias gdhome="git diff $bb";
+alias grh="git reset --hard $bb"
+alias gd1="git diff HEAD\^"
+alias gd2="git diff HEAD\^\^"
+alias gdhead="git diff HEAD"
+alias gdhome="git diff $bb"

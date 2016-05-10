@@ -1,6 +1,6 @@
 {
 	"path_mapping": {
-		"/var/www/app" : "/Users/abeckwith/Development/churchcommunitybuilder/app",
+		"/var/www" : "/Users/abeckwith/Development/churchcommunitybuilder"
 	},
 	"url": "http://dev.local/",
 	"max_children": 256,
