@@ -13,7 +13,11 @@
 	"folder_exclude_patterns":
 	[
 		"build",
-		"node_modules"
+		".git",
+		"assets",
+		".sass-cache",
+		"tests",
+		"node_modules",
 	],
 	"font_face": "Source Code Pro Light",
 	"font_size": 13,
@@ -30,6 +34,7 @@
 		120
 	],
 	"show_full_path": true,
+	"spacegray_fileicons": true,
 	"tab_size": 4,
 	"theme": "Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": false,

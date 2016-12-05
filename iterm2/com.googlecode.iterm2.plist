@@ -6,6 +6,8 @@
 	<true/>
 	<key>AllowClipboardAccess</key>
 	<false/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AnimateDimming</key>
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -296,7 +298,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/dotfiles/iterm2</string>
+	<string>~/Documents</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 459}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
@@ -306,6 +308,8 @@
 	<key>NSRepeatCountBinding</key>
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
+	<false/>
+	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
 	<key>NSTableView Columns KeyBingingTable</key>
 	<array>
@@ -318,7 +322,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>302</string>
+		<string>307</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -332,13 +336,15 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>-738 438 445 600 -1080 -467 1080 1897 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>1337 879 924 485 1280 -533 1080 1897 </string>
+	<string>130 321 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>-732 875 384 129 -1080 -467 1080 1897 </string>
+	<string>1620 936 400 129 1280 -390 1080 1897 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>314 116 700 622 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1282 -459 1075 1818 1280 -533 1080 1897 </string>
+	<string>50 7 1228 763 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1280 1060 585 426 1280 -390 1080 1897 </string>
+	<string>1280 1117 585 426 1280 -333 1080 1897 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1067,12 +1073,26 @@
 			<string>~/Development/churchcommunitybuilder/app</string>
 		</dict>
 	</array>
+	<key>NoSyncConfirmBeta</key>
+	<true/>
+	<key>NoSyncHaveShownPromoWithId_4</key>
+	<true/>
+	<key>NoSyncInstallationId</key>
+	<string>AFB3A373-4296-457B-B779-41858275D684</string>
 	<key>NoSyncNeverRemindPrefsChangesLost</key>
 	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
+	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
+	<real>486488267.65622699</real>
 	<key>NoSyncTimeOfLastPromo</key>
-	<real>466033412.20167297</real>
+	<real>477593444.208758</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>475517603.34102899</real>
+	<real>486487686.608666</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -1122,6 +1142,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/abeckwith/dotfiles/iterm2</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -1132,26 +1154,34 @@
 	<integer>3</integer>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
+	<key>SUFeedAlternateAppNameKey</key>
+	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=49</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-01-26T16:11:45Z</date>
+	<date>2016-09-14T19:58:18Z</date>
+	<key>SUSkippedVersion</key>
+	<string>3.0.9</string>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>
+	<key>ShowFullScreenTabBar</key>
+	<false/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
-	<false/>
+	<true/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.16303835809230804</real>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
 	<integer>6</integer>
+	<key>TabStyle</key>
+	<integer>0</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>ThreeFingerEmulates</key>
@@ -1183,6 +1213,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.1.4</string>
+	<string>3.0.4</string>
 </dict>
 </plist>

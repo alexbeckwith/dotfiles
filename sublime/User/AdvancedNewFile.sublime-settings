@@ -1,0 +1,6 @@
+{
+	"auto_refresh_sidebar": true,
+	"completion_type": "nix",
+	"relative_from_current": true,
+	"ignore_case": true
+}

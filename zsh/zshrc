@@ -2,19 +2,23 @@ export ZSH=$HOME/dotfiles/zsh/oh-my-zsh
 
 ZSH_THEME=bullet-train
 HYPHEN_INSENSITIVE="true"
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
+
+export NVM_DIR=~/.nvm
 
 plugins=(git sublime zsh-syntax-highlighting zsh-autosuggestions)
 
-export PATH="$PATH:/usr/local/bin:/usr/local/share/npm/bin:$HOME/.rvm/gems/ruby-2.2.1/bin:$HOME/.rvm/gems/ruby-2.2.1@global/bin:$HOME/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/pear/bin:$HOME/.rvm/bin:$HOME/bin:$HOME/Development/churchcommunitybuilder/app/vendor/bin/:' >> ~/dotfiles/zsh/zshrc"
+export PATH=$PATH:/usr/local/bin:/usr/local/share/npm/bin:$HOME/.rvm/gems/ruby-2.2.1/bin:$HOME/.rvm/gems/ruby-2.2.1@global/bin:$HOME/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/pear/bin:$HOME/.rvm/bin:$HOME/bin:$HOME/Development/churchcommunitybuilder/app/vendor/bin
 
 source $ZSH/oh-my-zsh.sh
+source $(brew --prefix nvm)/nvm.sh
 
 # Custom!
-
-export bb="features/you_been_served"
+export bb="features/ri_events_view"
+export sb="integration"
 export vdef="dev01"
 export XDEBUG_CONFIG="idekey=sublime.xdebug"
+export CCB="$HOME/Development/churchcommunitybuilder/app"
 
 coNewBranch() {
     if [ -z "$2" ]; then
@@ -24,23 +28,14 @@ coNewBranch() {
     fi
 }
 
-smartPullAndRebase() {
-	baseBranch=$((-z "$1" ? $bb : $1))
-	currentBranch="$(git rev-parse --abbrev-ref HEAD)"
-	git checkout baseBranch
-	git smart-pull
-	git checkout "${currentBranch}"
-	git rebase baseBranch
-}
-
 # general commands
-
 alias zc="subl ~/dotfiles/zsh/zshrc"
 alias zl="source ~/.zshrc"
 alias ohmyzsh="subl ~/dotfiles/zsh/oh-my-zsh"
 alias df="cd ~/dotfiles && gst"
-alias ccb="cd ~/Development/churchcommunitybuilder/app && gst"
-alias lss="ls -aF"
+alias ccb="cd $CCB && gst"
+alias web-components="cd ~/Development/web-components && gst"
+alias lss="ls -laF"
 
 # network settings
 alias netrem="networksetup -switchtolocation \"Remote\""
@@ -48,7 +43,7 @@ alias netdef="networksetup -switchtolocation \"Office\""
 alias pf="sudo pfctl -ef /etc/pf.conf"
 
 # vagrant
-alias vup="vagrant up $vdef && pf"
+alias vup="vagrant up $vdef"
 alias vdown="vagrant halt $vdef"
 alias vref="vagrant reload $vdef"
 alias vrebuild="$HOME/Dropbox\ \(CCBHQ\)/Vagrant/rebuild.sh"
@@ -57,10 +52,12 @@ alias vrebuild="$HOME/Dropbox\ \(CCBHQ\)/Vagrant/rebuild.sh"
 alias gsp="git smart-pull"
 alias gh="git checkout $bb"
 alias ghsp="git checkout $bb && git smart-pull"
-alias ghrb=smartPullAndRebase
+alias gmsp="git checkout master && git smart-pull"
+alias gisp="git checkout integration && git smart-pull"
 alias gcob=coNewBranch
-alias grh="git reset --hard $bb"
 alias gd1="git diff HEAD\^"
 alias gd2="git diff HEAD\^\^"
-alias gdhead="git diff HEAD"
 alias gdhome="git diff $bb"
+
+# misc
+alias runapp="cd $CCB/resources && npm run webpack:dev:watch"

@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"AdvancedNewFile",
 		"ApacheConf.tmLanguage",
 		"Auto Semi-Colon",
 		"Babel",
@@ -14,6 +15,7 @@
 		"EJS",
 		"Emmet",
 		"Function Name Display",
+		"FuzzyFilePath",
 		"Git",
 		"GitGutter",
 		"GoToClass",
@@ -28,6 +30,7 @@
 		"SFTP",
 		"SideBarEnhancements",
 		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-contrib-sass-lint",
 		"SublimeLinter-jscs",
 		"SublimeLinter-jshint",

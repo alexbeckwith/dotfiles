@@ -7,13 +7,18 @@
         "gutter_theme_excludes": [],
         "lint_mode": "background",
         "linters": {
-            "jscs": {
+            "eslint": {
                 "@disable": false,
                 "args": [],
                 "excludes": []
             },
+            "jscs": {
+                "@disable": true,
+                "args": [],
+                "excludes": []
+            },
             "jshint": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "excludes": []
             },
@@ -57,7 +62,7 @@
                 "excludes": []
             }
         },
-        "mark_style": "solid underline",
+        "mark_style": "stippled underline",
         "no_column_highlights_line": false,
         "passive_warnings": false,
         "paths": {
