@@ -16,8 +16,8 @@
 		".git",
 		"assets",
 		".sass-cache",
-		"tests",
-		"node_modules",
+		// "tests",
+		"node_modules"
 	],
 	"font_face": "Source Code Pro Light",
 	"font_size": 13,

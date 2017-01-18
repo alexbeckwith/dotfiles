@@ -14,7 +14,7 @@ source $ZSH/oh-my-zsh.sh
 source $(brew --prefix nvm)/nvm.sh
 
 # Custom!
-export bb="features/ri_events_view"
+export bb="features/ri_quick_look"
 export sb="integration"
 export vdef="dev01"
 export XDEBUG_CONFIG="idekey=sublime.xdebug"
@@ -60,4 +60,4 @@ alias gd2="git diff HEAD\^\^"
 alias gdhome="git diff $bb"
 
 # misc
-alias runapp="cd $CCB/resources && npm run webpack:dev:watch"
+alias runapp="cd $CCB/resources/web-app && npm run start"
