@@ -15,9 +15,7 @@
 		"build",
 		".git",
 		"assets",
-		".sass-cache",
-		// "tests",
-		"node_modules"
+		".sass-cache"
 	],
 	"font_face": "Source Code Pro Light",
 	"font_size": 13,
@@ -30,8 +28,7 @@
 	"line_padding_top": 1,
 	"rulers":
 	[
-		80,
-		120
+		100
 	],
 	"show_full_path": true,
 	"spacegray_fileicons": true,

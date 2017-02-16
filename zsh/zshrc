@@ -4,6 +4,14 @@ ZSH_THEME=bullet-train
 HYPHEN_INSENSITIVE="true"
 # ENABLE_CORRECTION="true"
 
+BULLETTRAIN_PROMPT_ORDER=(
+  time
+  dir
+  git
+)
+BULLETTRAIN_TIME_BG="red"
+BULLETTRAIN_TIME_FG="white"
+
 export NVM_DIR=~/.nvm
 
 plugins=(git sublime zsh-syntax-highlighting zsh-autosuggestions)
@@ -11,10 +19,13 @@ plugins=(git sublime zsh-syntax-highlighting zsh-autosuggestions)
 export PATH=$PATH:/usr/local/bin:/usr/local/share/npm/bin:$HOME/.rvm/gems/ruby-2.2.1/bin:$HOME/.rvm/gems/ruby-2.2.1@global/bin:$HOME/.rvm/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/pear/bin:$HOME/.rvm/bin:$HOME/bin:$HOME/Development/churchcommunitybuilder/app/vendor/bin
 
 source $ZSH/oh-my-zsh.sh
-source $(brew --prefix nvm)/nvm.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Custom!
-export bb="features/ri_quick_look"
+export fb="features/ri_group_messages"
+export bb="fatj/staging"
 export sb="integration"
 export vdef="dev01"
 export XDEBUG_CONFIG="idekey=sublime.xdebug"
@@ -52,6 +63,7 @@ alias vrebuild="$HOME/Dropbox\ \(CCBHQ\)/Vagrant/rebuild.sh"
 alias gsp="git smart-pull"
 alias gh="git checkout $bb"
 alias ghsp="git checkout $bb && git smart-pull"
+alias gfsp="git checkout $fb && git smart-pull"
 alias gmsp="git checkout master && git smart-pull"
 alias gisp="git checkout integration && git smart-pull"
 alias gcob=coNewBranch
@@ -60,4 +72,4 @@ alias gd2="git diff HEAD\^\^"
 alias gdhome="git diff $bb"
 
 # misc
-alias runapp="cd $CCB/resources/web-app && npm run start"
+alias buildapp="cd $CCB/resources/web-app && yarn install && yarn start"
